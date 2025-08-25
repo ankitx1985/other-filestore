@@ -6,65 +6,65 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bot Configuration
-BOT_TOKEN = os.getenv("8268433358:AAE9bR6VzS2E7Am6J038CbiSk1v-BMx64_8")
-API_ID = int(os.getenv("26880349"))
-API_HASH = os.getenv("236f4017f1652b0415c63d120b53d544")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8268433358:AAE9bR6VzS2E7Am6J038CbiSk1v-BMx64_8")
+API_ID = int(os.getenv("API_ID", "26880349"))
+API_HASH = os.getenv("API_HASH", "236f4017f1652b0415c63d120b53d544")
 
-OWNER_ID = int(os.getenv("OWNER_ID", 5254302308))
+OWNER_ID = int(os.getenv("OWNER_ID", "5254302308"))
 
 # Database Configuration
-MONGO_URI = os.getenv("mongodb+srv://As:tiknas123@cluster0.tst1d5j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = os.getenv("filestore")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://As:tiknas123@cluster0.tst1d5j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = os.getenv("DATABASE_NAME", "filestore")
 
 # Channel Configuration 
-DB_CHANNEL_ID = int(os.getenv("-1002955857749"))
-FORCE_SUB_CHANNEL = int(os.getenv("https://t.me/Heisenberg_Universe")) # First force sub channel
-FORCE_SUB_CHANNEL_2 = int(os.getenv("https://t.me/HeisenbergBackupZone", 0)) # Second force sub channel, defaults to 0 if not set
-FORCE_SUB_CHANNEL_3 = int(os.getenv("FORCE_SUB_CHANNEL_3", 0))
-FORCE_SUB_CHANNEL_4 = int(os.getenv("FORCE_SUB_CHANNEL_4", 0))
+DB_CHANNEL_ID = int(os.getenv("DB_CHANNEL_ID", "-1002955857749"))
+FORCE_SUB_CHANNEL = int(os.getenv("FORCE_SUB_CHANNEL", "0"))  # Can’t be a URL. Use channel ID.
+FORCE_SUB_CHANNEL_2 = int(os.getenv("FORCE_SUB_CHANNEL_2", "0"))
+FORCE_SUB_CHANNEL_3 = int(os.getenv("FORCE_SUB_CHANNEL_3", "0"))
+FORCE_SUB_CHANNEL_4 = int(os.getenv("FORCE_SUB_CHANNEL_4", "0"))
 
-# Add a second channel link
-CHANNEL_LINK = os.getenv("https://t.me/Heisenberg_Universe") # First channel link
-CHANNEL_LINK_2 = os.getenv("https://t.me/HeisenbergBackupZone", "") # Second channel link
-CHANNEL_LINK_3 = os.getenv("CHANNEL_LINK_3", "") 
-CHANNEL_LINK_4 = os.getenv("CHANNEL_LINK_4", "") 
+# Channel Links (as string URLs)
+CHANNEL_LINK = os.getenv("CHANNEL_LINK", "https://t.me/Heisenberg_Universe")
+CHANNEL_LINK_2 = os.getenv("CHANNEL_LINK_2", "https://t.me/HeisenbergBackupZone")
+CHANNEL_LINK_3 = os.getenv("CHANNEL_LINK_3", "")
+CHANNEL_LINK_4 = os.getenv("CHANNEL_LINK_4", "")
 
-#start photo 
-START_PHOTO = os.getenv("START_PHOTO", "") #start photo for bot
+# Start photo
+START_PHOTO = os.getenv("START_PHOTO", "")
 
 # Bot Information
-BOT_USERNAME = os.getenv("@NinjaHattoriRobot")
-BOT_NAME = os.getenv("Ninja Hattori")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "@NinjaHattoriRobot")
+BOT_NAME = os.getenv("BOT_NAME", "Ninja Hattori")
 BOT_VERSION = "2.0"
 
-# Privacy Mode Configuration and codexbotz delete time
+# Privacy Mode Configuration and auto delete time
 PRIVACY_MODE = os.getenv("PRIVACY_MODE", "off").lower() == "on"
-AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", 30))
+AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "30"))
 
-# Your Modiji Url Api Key Here
+# Modiji API Key
 MODIJI_API_KEY = os.getenv("MODIJI_API_KEY")
 if not MODIJI_API_KEY:
     print("⚠️ Warning: MODIJI_API_KEY not set in environment variables")
 
 # Links
-CHANNEL_LINK = os.getenv("https://t.me/Heisenberg_Universe")
-DEVELOPER_LINK = os.getenv("https://t.me/Heisenberg_Universe")
-SUPPORT_LINK = os.getenv("https://t.me/HeisenbergBackupZone")
+DEVELOPER_LINK = os.getenv("DEVELOPER_LINK", "https://t.me/Heisenberg_Universe")
+SUPPORT_LINK = os.getenv("SUPPORT_LINK", "https://t.me/HeisenbergBackupZone")
 
-# For Koyeb/render 
-WEB_SERVER = bool(os.getenv("WEB_SERVER", True)) # make it True if deploying on koyeb/render else False
-PING_URL = os.getenv("PING_URL") # add your koyeb/render's public url
-PING_TIME = int(os.getenv("05")) # Add time_out in seconds
+# For Koyeb/Render
+WEB_SERVER = os.getenv("WEB_SERVER", "True").lower() == "true"
+PING_URL = os.getenv("PING_URL", "")  # Your deploy URL
+PING_TIME = int(os.getenv("PING_TIME", "5"))  # Timeout in seconds
 
-# Admin IDs - Convert space-separated string to list of integers
+# Admin IDs
 ADMIN_IDS: List[int] = [
     int(admin_id.strip())
     for admin_id in os.getenv("ADMIN_IDS", "").split()
     if admin_id.strip().isdigit()
 ]
 
-# File size limit (4GB in bytes)
+# File size limit (4GB)
 MAX_FILE_SIZE = 4000 * 1024 * 1024
+ 
 
 # Supported file types and extensions
 SUPPORTED_TYPES = [
