@@ -6,26 +6,26 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bot Configuration
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-API_ID = int(os.getenv("API_ID"))
-API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("8040365740:AAGtnEtpTNbb1ieFR9313OvRZ6jJDGzQZAw")
+API_ID = int(os.getenv("20384154"))
+API_HASH = os.getenv("0d6ceefc2def307335d20851a4220913")
 
-OWNER_ID = int(os.getenv("OWNER_ID", 7355202884))
+OWNER_ID = int(os.getenv("OWNER_ID", 5415721126))
 
 # Database Configuration
-MONGO_URI = os.getenv("MONGO_URI")
-DATABASE_NAME = os.getenv("DATABASE_NAME")
+MONGO_URI = os.getenv("mongodb+srv://tiknas561:ZGOmVdEdklM8TDMk@filestore.6i0cgdf.mongodb.net/?retryWrites=true&w=majority&appName=Filestore")
+DATABASE_NAME = os.getenv("filestore")
 
 # Channel Configuration 
-DB_CHANNEL_ID = int(os.getenv("DB_CHANNEL_ID"))
-FORCE_SUB_CHANNEL = int(os.getenv("FORCE_SUB_CHANNEL")) # First force sub channel
-FORCE_SUB_CHANNEL_2 = int(os.getenv("FORCE_SUB_CHANNEL_2", 0)) # Second force sub channel, defaults to 0 if not set
+DB_CHANNEL_ID = int(os.getenv("-1002996761115"))
+FORCE_SUB_CHANNEL = int(os.getenv("https://t.me/Heisenberg_Universe")) # First force sub channel
+FORCE_SUB_CHANNEL_2 = int(os.getenv("https://t.me/HeisenbergBackupZone", 0)) # Second force sub channel, defaults to 0 if not set
 FORCE_SUB_CHANNEL_3 = int(os.getenv("FORCE_SUB_CHANNEL_3", 0))
 FORCE_SUB_CHANNEL_4 = int(os.getenv("FORCE_SUB_CHANNEL_4", 0))
 
 # Add a second channel link
-CHANNEL_LINK = os.getenv("CHANNEL_LINK") # First channel link
-CHANNEL_LINK_2 = os.getenv("CHANNEL_LINK_2", "") # Second channel link
+CHANNEL_LINK = os.getenv("https://t.me/Heisenberg_Universe") # First channel link
+CHANNEL_LINK_2 = os.getenv("https://t.me/HeisenbergBackupZone", "") # Second channel link
 CHANNEL_LINK_3 = os.getenv("CHANNEL_LINK_3", "") 
 CHANNEL_LINK_4 = os.getenv("CHANNEL_LINK_4", "") 
 
@@ -33,8 +33,8 @@ CHANNEL_LINK_4 = os.getenv("CHANNEL_LINK_4", "")
 START_PHOTO = os.getenv("START_PHOTO", "") #start photo for bot
 
 # Bot Information
-BOT_USERNAME = os.getenv("BOT_USERNAME")
-BOT_NAME = os.getenv("BOT_NAME")
+BOT_USERNAME = os.getenv("@Haldiramchips_bot")
+BOT_NAME = os.getenv("File Store Bot")
 BOT_VERSION = "2.0"
 
 # Privacy Mode Configuration and codexbotz delete time
@@ -47,14 +47,14 @@ if not MODIJI_API_KEY:
     print("⚠️ Warning: MODIJI_API_KEY not set in environment variables")
 
 # Links
-CHANNEL_LINK = os.getenv("CHANNEL_LINK")
-DEVELOPER_LINK = os.getenv("DEVELOPER_LINK")
-SUPPORT_LINK = os.getenv("SUPPORT_LINK")
+CHANNEL_LINK = os.getenv("https://t.me/Heisenberg_Universe")
+DEVELOPER_LINK = os.getenv("https://t.me/Heisenberg_Universe")
+SUPPORT_LINK = os.getenv("https://t.me/HeisenbergBackupZone")
 
 # For Koyeb/render 
 WEB_SERVER = bool(os.getenv("WEB_SERVER", True)) # make it True if deploying on koyeb/render else False
 PING_URL = os.getenv("PING_URL") # add your koyeb/render's public url
-PING_TIME = int(os.getenv("PING_TIME")) # Add time_out in seconds
+PING_TIME = int(os.getenv("05")) # Add time_out in seconds
 
 # Admin IDs - Convert space-separated string to list of integers
 ADMIN_IDS: List[int] = [
@@ -118,8 +118,8 @@ class Messages:
 
 Hello {user_mention}! I'm your secure file sharing assistant!
 
-📢 Join @Thealphabotz for updates!
-👨‍💻 Contact @adarsh2626 for support
+📢 Join @Heisenberg_Universe for updates!
+👨‍💻 Contact @Heisenbergsells for support
 
 Use /help to see available commands!
 """
@@ -160,12 +160,12 @@ Use /help to see available commands!
 ℹ️ 𝙰𝚋𝚘𝚞𝚝 {bot_name}
 
 𝚅𝚎𝚛𝚜𝚒𝚘𝚗: {version}
-𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛: @Alphabotzchat 
+𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛: @Heisenbergsells
 𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎: 𝙿𝚢𝚝𝚑𝚘𝚗
 𝙵𝚛𝚊𝚖𝚎𝚠𝚘𝚛𝚔: 𝙿𝚢𝚛𝚘𝚐𝚛𝚊𝚖
 
-📢 𝚄𝚙𝚍𝚊𝚝𝚎𝚜: @TheAlphaBotz
-🛠 𝚂𝚞𝚙𝚙𝚘𝚛𝚝: @AlphaBotzChat
+📢 𝚄𝚙𝚍𝚊𝚝𝚎𝚜: @Heisenberg_Universe
+🛠 𝚂𝚞𝚙𝚙𝚘𝚛𝚝: @HeisenbergBackupZone
 
 use /repo to know more info
 """
