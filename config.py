@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bot Configuration
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8302360365:AAHAnotoPRClcXqaXKtNxymTjfFaEP86xuQ")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8258209803:AAHg-EVFmAbamcxIBh2uLDnUF4PC8n_xggA")
 API_ID = int(os.getenv("API_ID", "26880349"))
 API_HASH = os.getenv("API_HASH", "236f4017f1652b0415c63d120b53d544")
 
@@ -33,8 +33,8 @@ CHANNEL_LINK_4 = os.getenv("CHANNEL_LINK_4", "")
 START_PHOTO = os.getenv("START_PHOTO", "https://telegra.ph/Extractor-Bot-08-25")
 
 # Bot Information
-BOT_USERNAME = os.getenv("BOT_USERNAME", "@FreshNewsRobot")
-BOT_NAME = os.getenv("BOT_NAME", "Daily News")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "@DailyNewsRoobot")
+BOT_NAME = os.getenv("BOT_NAME", "Viral News")
 BOT_VERSION = "2.0"
 
 # Privacy Mode Configuration and auto delete time
