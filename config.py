@@ -6,18 +6,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bot Configuration
-BOT_TOKEN = os.getenv("8040365740:AAGtnEtpTNbb1ieFR9313OvRZ6jJDGzQZAw")
-API_ID = int(os.getenv("20384154"))
-API_HASH = os.getenv("0d6ceefc2def307335d20851a4220913")
+BOT_TOKEN = os.getenv("8268433358:AAE9bR6VzS2E7Am6J038CbiSk1v-BMx64_8")
+API_ID = int(os.getenv("26880349"))
+API_HASH = os.getenv("236f4017f1652b0415c63d120b53d544")
 
-OWNER_ID = int(os.getenv("OWNER_ID", 5415721126))
+OWNER_ID = int(os.getenv("OWNER_ID", 5254302308))
 
 # Database Configuration
-MONGO_URI = os.getenv("mongodb+srv://tiknas561:ZGOmVdEdklM8TDMk@filestore.6i0cgdf.mongodb.net/?retryWrites=true&w=majority&appName=Filestore")
+MONGO_URI = os.getenv("mongodb+srv://As:tiknas123@cluster0.tst1d5j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = os.getenv("filestore")
 
 # Channel Configuration 
-DB_CHANNEL_ID = int(os.getenv("-1002996761115"))
+DB_CHANNEL_ID = int(os.getenv("-1002955857749"))
 FORCE_SUB_CHANNEL = int(os.getenv("https://t.me/Heisenberg_Universe")) # First force sub channel
 FORCE_SUB_CHANNEL_2 = int(os.getenv("https://t.me/HeisenbergBackupZone", 0)) # Second force sub channel, defaults to 0 if not set
 FORCE_SUB_CHANNEL_3 = int(os.getenv("FORCE_SUB_CHANNEL_3", 0))
@@ -33,13 +33,13 @@ CHANNEL_LINK_4 = os.getenv("CHANNEL_LINK_4", "")
 START_PHOTO = os.getenv("START_PHOTO", "") #start photo for bot
 
 # Bot Information
-BOT_USERNAME = os.getenv("@Haldiramchips_bot")
-BOT_NAME = os.getenv("File Store Bot")
+BOT_USERNAME = os.getenv("@NinjaHattoriRobot")
+BOT_NAME = os.getenv("Ninja Hattori")
 BOT_VERSION = "2.0"
 
 # Privacy Mode Configuration and codexbotz delete time
 PRIVACY_MODE = os.getenv("PRIVACY_MODE", "off").lower() == "on"
-AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", 3))
+AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", 30))
 
 # Your Modiji Url Api Key Here
 MODIJI_API_KEY = os.getenv("MODIJI_API_KEY")
